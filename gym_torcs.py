@@ -172,10 +172,9 @@ class TorcsEnv:
 
         progress = (1 - abs((client.S.d['speedX'] - speedX) / 100)) + \
                    (1 - abs((client.S.d['speedY'] - speedY) / 100)) + \
-                   (1 - abs((client.S.d['speedZ'] - speedZ) / 100))
+                   (1 - abs((client.S.d['speedZ'] - speedZ) / 100)) - 2
+
         reward = progress
-
-
 
         #Termination rules
         # Episode is terminated if the car is out of track
