@@ -162,13 +162,12 @@ class TorcsEnv:
 
 
         self.step_num += 1
-        compare = self.step_num%200
-        compare = str(200) if compare == 0 else str(compare)
+        compare = self.step_num%100
+        compare = str(100) if compare == 0 else str(compare)
         data = self.master_race.get(compare)
 
         speedX = data['speedX']
         speedY = data['speedY']
-
         speedZ = data['speedZ']
 
         progress = (1 - abs((client.S.d['speedX'] - speedX) / 100)) + \
